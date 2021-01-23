@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="20dp"
+        android:inputType="textPersonName"
+        android:hint="Enter name here" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="20dp"
+        android:inputType="textPersonName"
+        android:hint="Enter address here"
+        android:layout_below="@+id/name"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="20dp"
+        android:inputType="textPersonName"
+        android:hint="Enter phone here"
+        android:layout_below="@+id/address"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textColor="#000"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/phone"/>
+
+    <RadioGroup
+        android:layout_marginTop="30dp"
+        android:id="@+id/genderGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone"
+        android:layout_toEndOf="@+id/gender"
+        android:layout_toRightOf="@+id/gender">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department"
+        android:textColor="#000"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/genderGroup"
+        android:layout_toRightOf="@id/genderGroup"
+        android:layout_below="@+id/phone"/>
+
+    <RadioGroup
+        android:id="@+id/depgroup"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone"
+        android:layout_toEndOf="@+id/department"
+        android:layout_toRightOf="@+id/department">
+
+        <RadioButton
+            android:id="@+id/cs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CS department" />
+
+        <RadioButton
+            android:id="@+id/it"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IT department" />
+
+        <RadioButton
+            android:id="@+id/nt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NT department" />
+    </RadioGroup>
+
+    <Button
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/depgroup"
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"/>
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/add"
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"/>
+</RelativeLayout>
